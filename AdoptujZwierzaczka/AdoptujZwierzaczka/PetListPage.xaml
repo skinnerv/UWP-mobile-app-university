@@ -1,0 +1,47 @@
+﻿<Page
+    x:Class="AdoptujZwierzaczka.PetListPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AdoptujZwierzaczka"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel Grid.Row="0"  Height="40" VerticalAlignment="Top" Margin="10 20 40 0">
+            <Button x:Name="Powrót" Content="Powrót" Click="Powrót_Click" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1"  VerticalAlignment="Top" Height="40" Margin="40 80 40 0">
+            <TextBlock x:Name="txtblockZwierze" HorizontalAlignment="Left" Text="Oglądane zwięrzątka" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        </StackPanel>
+        <Grid Margin="40 100 40 0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="400" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="400"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Image x:Name="imgPet" Grid.Row="0" Grid.Column="0"/>
+            <Grid Grid.Row="0" Grid.Column="1" Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="200"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock x:Name="txtblock_Name" Grid.Row="0" Text="Nazwa" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <TextBlock x:Name="txtblock_Rase" Grid.Row="1" Text="Rasa" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <TextBlock x:Name="txtblock_Colour" Grid.Row="2" Text="Umaszczenie" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <Button x:Name="btn_Next" Content="NEXT" Click="btn_Next_Click" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Stretch" Background="Azure"/>
+                <Button x:Name="btn_SetPet" Grid.Row="4" Click="btn_SetPet_Click" Content="Zaopiekuj się nim" VerticalAlignment="Center" HorizontalAlignment="Left" Background="LightYellow"/>
+            </Grid>
+            
+        </Grid>
+        
+    </Grid>
+</Page>
